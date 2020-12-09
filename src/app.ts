@@ -7,6 +7,9 @@ class App {
 
     public constructor () {
         this.express = express()
+        this.middlewares()
+        this.database()
+        this.routes()
     }
 
     private middlewares (): void {
@@ -26,3 +29,5 @@ class App {
         })
     }
 }
+
+export default new App().express 
